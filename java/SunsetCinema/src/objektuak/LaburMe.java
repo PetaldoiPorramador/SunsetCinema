@@ -1,5 +1,7 @@
 package objektuak;
 
+import java.io.*;
+
 public class LaburMe extends Eduki{
     private String fabula;
 
@@ -19,7 +21,20 @@ public class LaburMe extends Eduki{
         this.fabula = fabula;
     }
 
-    public void getCSV() {
-        
+    public void getCSV() throws IOException {
+        File fitxCSV = new File("../../../../datuak/Pelikulak1.csv");
+        FileReader fr = new FileReader(fitxCSV);
+        BufferedReader br = new BufferedReader(fr);
+
+        String lerroa;
+        String emaitza="";
+        while ((lerroa=br.readLine())!=null) {
+            if(lerroa=="LaburMe;"+super.getId()+";"+super.getTitulua()+";"+super.getIraupena()+";"+fabula+";;;;"){
+                emaitza+="LaburMe;"+super.getId()+";"+super.getTitulua()+";"+super.getIraupena()+";"+fabula+";;;;\n";
+            }
+        }
+
+        System.out.println(emaitza);
+        br.close();
     }
 }

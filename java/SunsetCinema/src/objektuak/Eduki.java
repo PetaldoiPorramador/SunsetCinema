@@ -1,5 +1,7 @@
 package objektuak;
 
+import java.io.*;
+
 public class Eduki {
     private int id;
     private String titulua;
@@ -39,7 +41,7 @@ public class Eduki {
         this.iraupena = iraupena;
     }
 
-    public void getCSV() {
+    public void getCSV()  throws IOException{
 
     }
 
