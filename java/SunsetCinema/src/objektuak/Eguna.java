@@ -52,7 +52,7 @@ public class Eguna {
     }
 
     public void edukiaEditatu(Eduki edukia) {
-        this.edukiak.editatu(edukia);
+        this.edukiak.editatuEdukia(edukia);
     }
 
     public LocalTime getAzkenOrdua() {

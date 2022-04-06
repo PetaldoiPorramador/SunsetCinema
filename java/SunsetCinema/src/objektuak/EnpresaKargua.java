@@ -1,1 +1,3 @@
-public enum EnpresaKargua{Emplegatua, ZuzendariLokala, ZuzendariProbintziala};
+package objektuak;
+
+public enum EnpresaKargua{Emplegatua, ZuzendariLokala, ZuzendariProbintziala}

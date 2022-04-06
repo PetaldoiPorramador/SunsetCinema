@@ -33,6 +33,15 @@ public class EdukiZerrenda {
         return true;
     }
 
+    public int bilatuEdukiById(int id) {
+        for (int i = 0; i < edukiak.size(); i++) {
+            if (edukiak.get(i).getId() == id) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     public void ezabatuById(int id) {
         for (Eduki edukia : edukiak) {
             if (edukia.getId() == id) {
@@ -42,7 +51,7 @@ public class EdukiZerrenda {
         }
     }
 
-    public void editatu(Eduki edukia) {
+    public void editatuEdukia(Eduki edukia) {
         int i = 0;
         for (Eduki eduki : edukiak) {
             if (eduki.equals(edukia)) {
@@ -51,6 +60,13 @@ public class EdukiZerrenda {
             }
             i++;
         }
+    }
+
+    public int getAzkenId() {
+        if (edukiak.isEmpty()) {
+            return 0;
+        }
+        return edukiak.size() - 1;
     }
     
 }
