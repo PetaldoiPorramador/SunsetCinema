@@ -1,4 +1,4 @@
-package objektuak;
+
 
 public class LaburMe extends Eduki{
     private String fabula;

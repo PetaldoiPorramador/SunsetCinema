@@ -1,4 +1,4 @@
-package objektuak;
+
 
 public class LargoMe extends Eduki{
 
