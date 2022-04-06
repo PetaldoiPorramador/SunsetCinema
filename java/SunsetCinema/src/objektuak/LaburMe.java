@@ -29,8 +29,8 @@ public class LaburMe extends Eduki{
         String lerroa;
         String emaitza="";
         while ((lerroa=br.readLine())!=null) {
-            if(lerroa=="LaburMe;"+super.getId()+";"+super.getTitulua()+";"+super.getIraupena()+";"+fabula+";;;;"){
-                emaitza+="LaburMe;"+super.getId()+";"+super.getTitulua()+";"+super.getIraupena()+";"+fabula+";;;;\n";
+            if(lerroa=="LaburMetraia;"+super.getId()+";"+super.getTitulua()+";"+super.getIraupena()+";"+fabula+";;;;"){
+                emaitza+="LaburMetraia;"+super.getId()+";"+super.getTitulua()+";"+super.getIraupena()+";"+fabula+";;;;\n";
             }
         }
 
