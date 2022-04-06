@@ -46,5 +46,12 @@ public class Eduki {
     public void editatu() {
         
     }
+
+    public boolean generoTituluaKonparatu(Eduki edukia) {
+        if (this.titulua.equals(edukia.getTitulua())) {
+            return true;
+        }
+        return false;
+    }
     
 }

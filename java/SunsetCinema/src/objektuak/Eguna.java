@@ -2,10 +2,6 @@ package objektuak;
 
 import java.time.LocalTime;
 
-enum AstekoEguna {
-    ASTELEHENA, ASTEARTEA, ASTEAZKENA, OSTEGUNA, OSTIRALA, LARUNBATA, IGANDEA
-}
-
 public class Eguna {
     private AstekoEguna izena;
     private boolean beteta;
@@ -46,11 +42,13 @@ public class Eguna {
     }
 
     public void edukiaGehitu(Eduki edukia) {
-        this.edukiak.gehitu(edukia);
+        if (!beteta)
+            if (edukiak.getIraupenOsoa() + edukia.getIraupena() <= orduDisMax*60)
+                edukiak.sartuEdukia(edukia);
     }
 
-    public void edukiaKendu(Eduki edukia) {
-        this.edukiak.kendu(edukia);
+    public void edukiaKenduById(int id) {
+        this.edukiak.ezabatuById(id);
     }
 
     public void edukiaEditatu(Eduki edukia) {
@@ -58,7 +56,7 @@ public class Eguna {
     }
 
     public LocalTime getAzkenOrdua() {
-        return LocalTime.of(orduDisMax, 0).plusMinutes(this.edukiak.getIraupenTotala());
+        return LocalTime.of(orduDisMax, 0).plusMinutes(this.edukiak.getIraupenOsoa());
     }
 
 }

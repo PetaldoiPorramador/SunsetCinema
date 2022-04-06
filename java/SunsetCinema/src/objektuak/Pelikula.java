@@ -36,4 +36,11 @@ public class Pelikula extends LargoMe{
     public boolean gehituDaiteke() {
         return true;
     }
+
+    public boolean generoTituluaKonparatu(Pelikula pelikula) {
+        if (this.getGeneroa().equals(pelikula.getGeneroa())) {
+            return true;
+        }
+        return false;
+    }
 }
