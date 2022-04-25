@@ -21,7 +21,7 @@ public class LaburMe extends Eduki{
         this.fabula = fabula;
     }
 
-    public void getCSV() {
-        
+    public String getCSV() {
+        return "LaburMetraia" + super.getCSV() + ";" + this.fabula;      
     }
 }

@@ -41,8 +41,8 @@ public class Eduki {
         this.iraupena = iraupena;
     }
 
-    public void getCSV() {
-
+    public String getCSV() {
+        return this.id + ";" + this.titulua + ";" + this.iraupena;
     }
 
     public void editatu() {

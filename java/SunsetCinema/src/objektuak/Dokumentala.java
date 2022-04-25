@@ -1,9 +1,9 @@
 package objektuak;
 
-public class Dokumentala extends LargoMe{
+public class Dokumentala extends LargoMe {
     private String tema;
     private String produktorea;
-    
+
     public Dokumentala() {
     }
 
@@ -29,7 +29,7 @@ public class Dokumentala extends LargoMe{
         this.produktorea = produktorea;
     }
 
-    public void getCSV() {
-        
+    public String getCSV() {
+        return "Dokumentala;" + super.getCSV() + ";;;" + this.tema + ";" + this.produktorea;
     }
 }

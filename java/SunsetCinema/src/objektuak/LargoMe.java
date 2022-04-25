@@ -9,7 +9,7 @@ public class LargoMe extends Eduki{
         super(id, titulua, iraupena);
     }
     
-    public void getCSV() {
-        
+    public String getCSV() {
+        return super.getCSV() + ";";
     }
 }

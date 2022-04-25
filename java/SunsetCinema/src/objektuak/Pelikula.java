@@ -29,8 +29,8 @@ public class Pelikula extends LargoMe{
         this.pegi = pegi;
     }
 
-    public void getCSV() {
-
+    public String getCSV() {
+        return "Pelikula;" + super.getCSV() + ";" + this.generoa + ";" + this.pegi;
     }
 
     public boolean gehituDaiteke() {
