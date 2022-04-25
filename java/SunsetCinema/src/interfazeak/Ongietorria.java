@@ -1,4 +1,4 @@
-package bai;
+package interfazeak;
 
 import java.awt.EventQueue;
 
