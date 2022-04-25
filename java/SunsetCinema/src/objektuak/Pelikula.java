@@ -1,4 +1,4 @@
-
+package objektuak;
 
 public class Pelikula extends LargoMe{
     private String generoa;

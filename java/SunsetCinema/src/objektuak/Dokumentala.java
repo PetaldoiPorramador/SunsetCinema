@@ -1,4 +1,4 @@
-
+package objektuak;
 
 public class Dokumentala extends LargoMe{
     private String tema;

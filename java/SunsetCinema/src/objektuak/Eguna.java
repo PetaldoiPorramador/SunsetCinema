@@ -1,3 +1,4 @@
+package objektuak;
 
 
 import java.time.LocalTime;
@@ -13,6 +14,9 @@ public class Eguna {
         this.edukiak = new EdukiZerrenda();
     }
 
+    /**
+     * @param izena asteko egunaren izena
+     */
     private Eguna(AstekoEguna izena) {
         this.izena = izena;
         this.beteta = false;
@@ -29,7 +33,7 @@ public class Eguna {
                 break;
             case LARUNBATA:
             case IGANDEA:
-                this.orduDisMax = 6;
+                this.orduDisMax = 8;
                 break;
             default:
                 this.orduDisMax = -1;
