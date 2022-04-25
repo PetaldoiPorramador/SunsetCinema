@@ -21,20 +21,7 @@ public class LaburMe extends Eduki{
         this.fabula = fabula;
     }
 
-    public void getCSV() throws IOException {
-        File fitxCSV = new File("../../../../datuak/Pelikulak1.csv");
-        FileReader fr = new FileReader(fitxCSV);
-        BufferedReader br = new BufferedReader(fr);
-
-        String lerroa;
-        String emaitza="";
-        while ((lerroa=br.readLine())!=null) {
-            if(lerroa=="LaburMetraia;"+super.getId()+";"+super.getTitulua()+";"+super.getIraupena()+";"+fabula+";;;;"){
-                emaitza+="LaburMetraia;"+super.getId()+";"+super.getTitulua()+";"+super.getIraupena()+";"+fabula+";;;;\n";
-            }
-        }
-
-        System.out.println(emaitza);
-        br.close();
+    public void getCSV() {
+        
     }
 }

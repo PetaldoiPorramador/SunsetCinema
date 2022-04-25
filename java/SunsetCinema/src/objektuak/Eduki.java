@@ -41,7 +41,7 @@ public class Eduki {
         this.iraupena = iraupena;
     }
 
-    public void getCSV()  throws IOException{
+    public void getCSV() {
 
     }
 
