@@ -15,11 +15,8 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-import java.awt.Button;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.BorderLayout;
@@ -27,9 +24,6 @@ import java.awt.BorderLayout;
 public class EdukiAukeraketa {
 
 	private JFrame frame;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
 
 	/**
 	 * Launch the application.
