@@ -135,7 +135,7 @@ public class EdukiAukeraketa {
 		horizontalBox_3 .add(lblEduki_kop);
 		
 		Component rigidArea_2 = Box.createRigidArea(new Dimension(10, 20));
-		horizontalBox_3 .add(rigidArea);
+		horizontalBox_3 .add(rigidArea_2);
 		
 		textField_3 = new JTextField();
 		textField_3.setColumns(10);
@@ -155,11 +155,14 @@ public class EdukiAukeraketa {
 		horizontalBox_4 .add(lblBatazBesteko_iraupena);
 		
 		Component rigidArea_3 = Box.createRigidArea(new Dimension(10, 20));
-		horizontalBox_4 .add(rigidArea);
+		horizontalBox_4 .add(rigidArea_3);
 		
 		textField_4 = new JTextField();
 		textField_4.setColumns(10);
 		horizontalBox_4 .add(textField_4);
+		
+		/*------------------------------------------------------------------------------------------------------*/
+		
 		
 		/*Button button_hasiera = new Button("Hasiera");
 		frame.getContentPane().add(button_hasiera, BorderLayout.NORTH);
