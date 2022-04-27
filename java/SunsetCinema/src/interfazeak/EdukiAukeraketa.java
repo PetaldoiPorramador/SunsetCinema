@@ -187,6 +187,18 @@ public class EdukiAukeraketa {
 		
 		/*------------------------------------------------------------------------------------------------------*/
 		
+		Box horizontalBox_filler = Box.createHorizontalBox();
+		GridBagConstraints gbc_horizontalBox_filler = new GridBagConstraints();
+		gbc_horizontalBox_filler.insets = new Insets(0, 0, 0, 5);
+		gbc_horizontalBox_filler.gridx = 2;
+		gbc_horizontalBox_filler.gridy = 9;
+		panel.add(horizontalBox_filler, gbc_horizontalBox_filler);
+		
+		Component rigidArea_filler = Box.createRigidArea(new Dimension(10, 20));
+		horizontalBox_filler.add(rigidArea_filler);
+		
+		/*------------------------------------------------------------------------------------------------------*/
+		
 		Box horizontalBox_6 = Box.createHorizontalBox();
 		GridBagConstraints gbc_horizontalBox_6 = new GridBagConstraints();
 		gbc_horizontalBox_6.insets = new Insets(0, 0, 0, 5);
