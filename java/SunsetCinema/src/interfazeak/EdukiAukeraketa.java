@@ -24,6 +24,9 @@ import java.awt.BorderLayout;
 public class EdukiAukeraketa {
 
 	private JFrame frame;
+	private JTextField textField_2;
+	private JTextField textField_3;
+	private JTextField textField_4;
 
 	/**
 	 * Launch the application.
@@ -79,22 +82,84 @@ public class EdukiAukeraketa {
 		gbc_lblRegistro.gridy = 1;
 		panel.add(lblRegistro, gbc_lblRegistro);
 		
-		Box horizontalBox_4 = Box.createHorizontalBox();
-		GridBagConstraints gbc_horizontalBox_4 = new GridBagConstraints();
-		gbc_horizontalBox_4.fill = GridBagConstraints.HORIZONTAL;
-		gbc_horizontalBox_4.insets = new Insets(0, 0, 5, 5);
-		gbc_horizontalBox_4.gridx = 2;
-		gbc_horizontalBox_4.gridy = 7;
-		panel.add(horizontalBox_4, gbc_horizontalBox_4);
+		/*------------------------------------------------------------------------------------------------------*/
 		
-		JLabel lblEnpresaKargua = new JLabel("Enpresaren kargua:");
-		horizontalBox_4.add(lblEnpresaKargua);
+		Box horizontalBox_1 = Box.createHorizontalBox();
+		GridBagConstraints gbc_horizontalBox_1 = new GridBagConstraints();
+		gbc_horizontalBox_1.fill = GridBagConstraints.HORIZONTAL;
+		gbc_horizontalBox_1.insets = new Insets(0, 0, 5, 5);
+		gbc_horizontalBox_1.gridx = 2;
+		gbc_horizontalBox_1.gridy = 3;
+		panel.add(horizontalBox_1, gbc_horizontalBox_1);
+		
+		JLabel lblEnpresaKargua = new JLabel("Hautatu duzun eguna:");
+		horizontalBox_1.add(lblEnpresaKargua);
 		
 		Component rigidArea_4 = Box.createRigidArea(new Dimension(10, 20));
-		horizontalBox_4.add(rigidArea_4);
+		horizontalBox_1.add(rigidArea_4);
 		
 		JComboBox comboBoxEnpresaKargua = new JComboBox();
-		horizontalBox_4.add(comboBoxEnpresaKargua);
+		horizontalBox_1.add(comboBoxEnpresaKargua);
+		
+		/*------------------------------------------------------------------------------------------------------*/
+		
+		Box horizontalBox_2 = Box.createHorizontalBox();
+		GridBagConstraints gbc_horizontalBox_2  = new GridBagConstraints();
+		gbc_horizontalBox_2 .fill = GridBagConstraints.HORIZONTAL;
+		gbc_horizontalBox_2 .insets = new Insets(0, 0, 5, 5);
+		gbc_horizontalBox_2 .gridx = 2;
+		gbc_horizontalBox_2 .gridy = 4;
+		panel.add(horizontalBox_2 , gbc_horizontalBox_2);
+		
+		JLabel lblEdukiak = new JLabel("Eguneko edukiak: ");
+		horizontalBox_2 .add(lblEdukiak);
+		
+		Component rigidArea = Box.createRigidArea(new Dimension(10, 20));
+		horizontalBox_2 .add(rigidArea);
+		
+		textField_2 = new JTextField();
+		textField_2.setColumns(10);
+		horizontalBox_2 .add(textField_2);
+		
+		/*------------------------------------------------------------------------------------------------------*/
+		
+		Box horizontalBox_3 = Box.createHorizontalBox();
+		GridBagConstraints gbc_horizontalBox_3  = new GridBagConstraints();
+		gbc_horizontalBox_3 .fill = GridBagConstraints.HORIZONTAL;
+		gbc_horizontalBox_3 .insets = new Insets(0, 0, 5, 5);
+		gbc_horizontalBox_3 .gridx = 2;
+		gbc_horizontalBox_3 .gridy = 5;
+		panel.add(horizontalBox_3 , gbc_horizontalBox_3);
+		
+		JLabel lblEduki_kop = new JLabel("Eduki kopurua: ");
+		horizontalBox_3 .add(lblEduki_kop);
+		
+		Component rigidArea_2 = Box.createRigidArea(new Dimension(10, 20));
+		horizontalBox_3 .add(rigidArea);
+		
+		textField_3 = new JTextField();
+		textField_3.setColumns(10);
+		horizontalBox_3 .add(textField_3);
+		
+		/*------------------------------------------------------------------------------------------------------*/
+		
+		Box horizontalBox_4 = Box.createHorizontalBox();
+		GridBagConstraints gbc_horizontalBox_4  = new GridBagConstraints();
+		gbc_horizontalBox_4 .fill = GridBagConstraints.HORIZONTAL;
+		gbc_horizontalBox_4 .insets = new Insets(0, 0, 5, 5);
+		gbc_horizontalBox_4 .gridx = 2;
+		gbc_horizontalBox_4 .gridy = 6;
+		panel.add(horizontalBox_4 , gbc_horizontalBox_4);
+		
+		JLabel lblBatazBesteko_iraupena = new JLabel("Bataz-besteko iraunpena: ");
+		horizontalBox_4 .add(lblBatazBesteko_iraupena);
+		
+		Component rigidArea_3 = Box.createRigidArea(new Dimension(10, 20));
+		horizontalBox_4 .add(rigidArea);
+		
+		textField_4 = new JTextField();
+		textField_4.setColumns(10);
+		horizontalBox_4 .add(textField_4);
 		
 		/*Button button_hasiera = new Button("Hasiera");
 		frame.getContentPane().add(button_hasiera, BorderLayout.NORTH);
