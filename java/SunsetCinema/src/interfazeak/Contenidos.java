@@ -14,18 +14,12 @@ import java.awt.Font;
 import javax.swing.Box;
 import java.awt.Component;
 import java.awt.Dimension;
-import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
 
 public class Contenidos {
 
 	private JFrame frame;
-	private JTextField textPIzena;
-	private JTextField textPIraupena;
-	private JTextField textPID;
-	private JTextField textFabula;
-	private JTextField textGeneroa;
 
 	/**
 	 * Launch the application.
