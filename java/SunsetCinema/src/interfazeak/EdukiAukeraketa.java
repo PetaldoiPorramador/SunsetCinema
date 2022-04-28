@@ -5,18 +5,18 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.Box;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-import java.awt.Button;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.BorderLayout;
@@ -24,9 +24,6 @@ import java.awt.BorderLayout;
 public class EdukiAukeraketa {
 
 	private JFrame frame;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
 
 	/**
 	 * Launch the application.
@@ -99,11 +96,14 @@ public class EdukiAukeraketa {
 		horizontalBox_1.add(rigidArea_4);
 		
 		JComboBox comboBoxEnpresaKargua = new JComboBox();
+		comboBoxEnpresaKargua.setModel(new DefaultComboBoxModel(new String[] {"", "Astelehena", "Asteartea", "Asteazkena", "Osteguna", "Ostirala", "Larunbata", "Igandea"}));
+		comboBoxEnpresaKargua.setName("");
 		horizontalBox_1.add(comboBoxEnpresaKargua);
 		
 		/*------------------------------------------------------------------------------------------------------*/
 		
 		Box horizontalBox_2 = Box.createHorizontalBox();
+		horizontalBox_2.setVisible(false);
 		GridBagConstraints gbc_horizontalBox_2  = new GridBagConstraints();
 		gbc_horizontalBox_2 .fill = GridBagConstraints.HORIZONTAL;
 		gbc_horizontalBox_2 .insets = new Insets(0, 0, 5, 5);
@@ -117,13 +117,13 @@ public class EdukiAukeraketa {
 		Component rigidArea = Box.createRigidArea(new Dimension(10, 20));
 		horizontalBox_2 .add(rigidArea);
 		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
-		horizontalBox_2 .add(textField_2);
+		JLabel lblNewLabel = new JLabel("");
+		horizontalBox_2.add(lblNewLabel);
 		
 		/*------------------------------------------------------------------------------------------------------*/
 		
 		Box horizontalBox_3 = Box.createHorizontalBox();
+		horizontalBox_3.setVisible(false);
 		GridBagConstraints gbc_horizontalBox_3  = new GridBagConstraints();
 		gbc_horizontalBox_3 .fill = GridBagConstraints.HORIZONTAL;
 		gbc_horizontalBox_3 .insets = new Insets(0, 0, 5, 5);
@@ -137,13 +137,13 @@ public class EdukiAukeraketa {
 		Component rigidArea_2 = Box.createRigidArea(new Dimension(10, 20));
 		horizontalBox_3 .add(rigidArea_2);
 		
-		textField_3 = new JTextField();
-		textField_3.setColumns(10);
-		horizontalBox_3 .add(textField_3);
+		JLabel lblNewLabel_1 = new JLabel("");
+		horizontalBox_3.add(lblNewLabel_1);
 		
 		/*------------------------------------------------------------------------------------------------------*/
 		
 		Box horizontalBox_4 = Box.createHorizontalBox();
+		horizontalBox_4.setVisible(false);
 		GridBagConstraints gbc_horizontalBox_4  = new GridBagConstraints();
 		gbc_horizontalBox_4 .fill = GridBagConstraints.HORIZONTAL;
 		gbc_horizontalBox_4 .insets = new Insets(0, 0, 5, 5);
@@ -157,44 +157,62 @@ public class EdukiAukeraketa {
 		Component rigidArea_3 = Box.createRigidArea(new Dimension(10, 20));
 		horizontalBox_4 .add(rigidArea_3);
 		
-		textField_4 = new JTextField();
-		textField_4.setColumns(10);
-		horizontalBox_4 .add(textField_4);
+		JLabel lblNewLabel_2 = new JLabel("");
+		horizontalBox_4.add(lblNewLabel_2);
 		
 		/*------------------------------------------------------------------------------------------------------*/
 		
+		Box horizontalBox_5 = Box.createHorizontalBox();
+		GridBagConstraints gbc_horizontalBox_5 = new GridBagConstraints();
+		gbc_horizontalBox_5.insets = new Insets(0, 0, 0, 5);
+		gbc_horizontalBox_5.gridx = 2;
+		gbc_horizontalBox_5.gridy = 8;
+		panel.add(horizontalBox_5, gbc_horizontalBox_5);
 		
-		/*Button button_hasiera = new Button("Hasiera");
-		frame.getContentPane().add(button_hasiera, BorderLayout.NORTH);
-		button_hasiera.addActionListener(new ActionListener() {
+		JButton btnHasiera = new JButton("Hasiera");
+		horizontalBox_5.add(btnHasiera);
+		
+		Component rigidArea_5 = Box.createRigidArea(new Dimension(10, 20));
+		horizontalBox_5.add(rigidArea_5);
+		
+		JButton btnKartelera = new JButton("Kartelera");
+		btnKartelera.setEnabled(false);
+		horizontalBox_5.add(btnKartelera);
+		
+		/*------------------------------------------------------------------------------------------------------*/
+		
+		Box horizontalBox_filler = Box.createHorizontalBox();
+		GridBagConstraints gbc_horizontalBox_filler = new GridBagConstraints();
+		gbc_horizontalBox_filler.insets = new Insets(0, 0, 0, 5);
+		gbc_horizontalBox_filler.gridx = 2;
+		gbc_horizontalBox_filler.gridy = 9;
+		panel.add(horizontalBox_filler, gbc_horizontalBox_filler);
+		
+		Component rigidArea_filler = Box.createRigidArea(new Dimension(10, 20));
+		horizontalBox_filler.add(rigidArea_filler);
+		
+		/*------------------------------------------------------------------------------------------------------*/
+		
+		Box horizontalBox_6 = Box.createHorizontalBox();
+		GridBagConstraints gbc_horizontalBox_6 = new GridBagConstraints();
+		gbc_horizontalBox_6.insets = new Insets(0, 0, 0, 5);
+		gbc_horizontalBox_6.gridx = 2;
+		gbc_horizontalBox_6.gridy = 10;
+		panel.add(horizontalBox_6, gbc_horizontalBox_6);
+		
+		JButton btnAsteko_laburpena = new JButton("Asteko laburpena");
+		btnAsteko_laburpena.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
 			}
 		});
+		horizontalBox_6.add(btnAsteko_laburpena);
 		
-		Button button_kartelera = new Button("Kartelera");
-		frame.getContentPane().add( button_kartelera, BorderLayout.EAST);
-		button_kartelera.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-			}
-		});
-
-		Button button_astekoLaburpena = new Button("Asteko laburpena");
-		frame.getContentPane().add(button_astekoLaburpena, BorderLayout.WEST);
-		button_astekoLaburpena.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-			}
-		});
+		Component rigidArea_6 = Box.createRigidArea(new Dimension(10, 20));
+		horizontalBox_6.add(rigidArea_6);
 		
-		Button button_balioztatu = new Button("Balioztatu");
-		frame.getContentPane().add(button_balioztatu, BorderLayout.SOUTH);
-		button_balioztatu.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-			}
-		});*/
+		JButton btnBalioztatu = new JButton("Balioztatu");
+		btnBalioztatu.setEnabled(false);
+		horizontalBox_6.add(btnBalioztatu);
 	}
 
 }
