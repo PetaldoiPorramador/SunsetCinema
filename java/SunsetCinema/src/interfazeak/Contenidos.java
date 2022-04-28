@@ -1,10 +1,8 @@
-package src;
+package interfazeak;
 
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
-import javax.swing.BoxLayout;
-import net.miginfocom.swing.MigLayout;
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -17,9 +15,7 @@ import javax.swing.Box;
 import java.awt.Component;
 import java.awt.Dimension;
 import javax.swing.JTextField;
-import javax.swing.SwingConstants;
 import javax.swing.JComboBox;
-import javax.swing.JPasswordField;
 import javax.swing.JButton;
 
 public class Contenidos {
